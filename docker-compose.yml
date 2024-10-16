@@ -1,0 +1,13 @@
+services:
+  db:
+    image: mariadb:latest
+    volumes:
+      - concept-prevalence-study:/var/lib/mysql
+    restart: always
+    ports:
+      - 3306:3306
+    environment:
+      - MARIADB_ROOT_PASSWORD
+
+volumes:
+  concept-prevalence-study:
